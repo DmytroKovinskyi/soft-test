@@ -18,6 +18,7 @@ public class LibraryApiFactory : WebApplicationFactory<Program>, IAsyncLifetime
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
+        builder.UseEnvironment("Testing"); // Use a specific environment for tests
         builder.ConfigureServices(services =>
         {
             // Remove existing DbContext registration

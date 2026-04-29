@@ -6,7 +6,8 @@ using Xunit;
 
 namespace LibraryManagement.IntegrationTests;
 
-public class MemberIntegrationTests : IClassFixture<LibraryApiFactory>
+[Collection("Integration Tests Collection")]
+public class MemberIntegrationTests
 {
     private readonly HttpClient _client;
 

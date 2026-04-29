@@ -9,7 +9,8 @@ using Xunit;
 
 namespace LibraryManagement.IntegrationTests;
 
-public class LoanIntegrationTests : IClassFixture<LibraryApiFactory>
+[Collection("Integration Tests Collection")]
+public class LoanIntegrationTests
 {
     private readonly HttpClient _client;
     private readonly LibraryApiFactory _factory;
